@@ -147,11 +147,13 @@ int main() {
 	XBlocks8B mod("00:bf:ba:b6:ac:fd:da:5b:bd:93:8e:17:0e:d4:16:05:51:2e:75:71:fe:14:34:32:c2:c1:a4:dd:49:12:df:9e:a7:64:9b:d1:cc:86:e3:a2:b7:89:b9:09:fa:59:47:5b:00:c2:8d:50:33:74:31:24:68:cd:c4:c4:82:f9:16:3f:ca:96:bb:4e:88:bf:8f:47:28:60:d1:dd:61:90:1a:82:09:8b:71:21:30:62:97:aa:2d:75:e1:cc:8a:c3:58:b2:e4:c7:7f:02:b1:56:dd:8e:87:0f:dc:f6:48:c8:28:70:72:4c:86:68:d4:92:15:37:31:76:44:07:46:22:7a:dc:d1");
 	XBlocks8B pe(65537);
 	XBlocks8B pre("6b:9c:b0:cb:87:ef:f7:6e:00:53:d0:3d:52:6c:c9:af:37:14:54:56:f7:a0:14:9d:9b:72:9d:81:56:46:8d:16:07:32:2e:1f:4d:d6:96:8d:cd:8f:3e:3a:75:c1:c7:22:36:10:7a:e3:66:63:ee:bb:a4:42:bc:c9:86:65:26:87:e3:b8:48:15:58:37:79:5c:94:5d:1b:66:be:1b:cb:47:4b:5d:ec:bc:61:4d:ab:c7:fe:a8:94:df:8c:dc:8a:cb:7f:20:b0:3d:8f:66:36:40:05:fd:51:90:9c:59:7c:5b:60:9a:33:18:97:b4:69:3d:db:59:25:d3:6f:6d:00:01");
-
+	/*
 	my_rsa tmp_rsa(mod, pe, pre);
 	auto encoded = tmp_rsa.encode('a');
 	cout << " RESULT encoded = " << encoded << endl;
 	cout << " RESULT decoded = " << tmp_rsa.decode(encoded) << endl;
+	*/
+	cout << tmp5 << endl;
 	cout << " END OF PROGRAM " << endl;
 	return 0;
 

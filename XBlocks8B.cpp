@@ -1,5 +1,6 @@
 #include "XBlocks8B.h"
 #include <string>
+#include <sstream>
 //private
 const std::pair<uint32_t, uint32_t> XBlocks8B::mult4B(const uint32_t& factor1, const uint32_t& factor2) const {
 	return cutting_overflow_and_rest(uint64_t(factor1) * factor2);
@@ -201,15 +202,7 @@ XBlocks8B::XBlocks8B(const uint64_t& number) {
 }
 
 std::ostream& operator<<(std::ostream& os, const XBlocks8B& number) {
-	for (int i = 0; i < number.data.size(); i++) {
-		//if(i == 0)
-			//os << number.data[i];
-		//else
-		os << std::setw(9) << std::setfill('0') << number.data[i];
-		//if(i + 1 != number.data.size())
-			//os << " ";
-	}
-	return os;
+	return (os << number.get_string());
 }
 // ???
 uint32_t& XBlocks8B::operator[](const int& i) {
@@ -490,4 +483,16 @@ XBlocks8B pow(const XBlocks8B& base, const XBlocks8B& exp) {
 	}
 
 	return (result * pow(base, exp - cur_exp));
+}
+
+const std::string XBlocks8B::get_string() const
+{
+	std::ostringstream os;
+	for (int i = 0; i < data.size(); i++) {
+		if (i == 0)
+			os << data[i];
+		else os << std::setw(9) << std::setfill('0') << data[i];
+	}
+
+	return os.str();
 }

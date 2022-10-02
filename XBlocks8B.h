@@ -68,4 +68,5 @@ public:
 	const int number_of_digits() const;
 
 	const uint32_t& get_uint32() const;
+	const std::string get_string() const;
 };
